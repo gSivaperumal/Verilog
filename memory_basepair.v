@@ -44,7 +44,7 @@ reg [15:0] tempreg_a;
 reg [15:0] tempreg_t;
 reg [15:0] tempreg_g;
 reg [15:0] tempreg_c;
-reg [1:0] extracted_bits;
+
 
 always@(posedge clk)
 begin
@@ -125,7 +125,7 @@ always@(posedge clk)
 		if (countshortread <count_shortreadmax)
 		begin
 		
-		extracted_bits <= short_read[countshortread +: 2];
+		
 		case(short_read[countshortread +: 2])
 		
 		2'b00:   
